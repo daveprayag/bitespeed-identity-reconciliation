@@ -4,8 +4,8 @@ import { reconcileIdentity } from "../services/identity.service";
 import { IdentifyRequestBody, IdentifyResponse } from "../utils/types";
 
 const identifySchema = Joi.object<IdentifyRequestBody>({
-    email: Joi.string().email().allow(null, "").optional(),
-    phoneNumber: Joi.string().allow(null, "").optional(),
+    email: Joi.string().email().allow(null, ""),
+    phoneNumber: Joi.string().allow(null, ""),
 });
 
 const handleIdentify = async (
